@@ -21,16 +21,15 @@ function verify (params) {
 
     for (let i = 0; i<mowers.X.length; i++) {
 
-        console.log('X = ', mowers.X[i])
-        console.log('Y = ', mowers.Y[i])
-
         // MOWERS
-        if (isNaN(mowers.X[i]) ||isNaN (mowers.Y[i])) {
+        if (isNaN(mowers.X[i]) || isNaN(mowers.Y[i])) {
             error = "Please, only enter positive number in the X / Y section"
         } else if(mowers.X[i] < 0 || mowers.Y[i] < 0 ) {
             error = "Please enter only positive values"
         } else if(lawn.X < mowers.X[i] || lawn.Y < mowers.Y[i]) {
             error = "A mower can't be placed outside the lawn, please try again"
+        } else if(lawn.X * lawn.Y < mowers.X.length) {
+            error = "Too many mowers on the lawn"
         } else {
 
             // CARDINAL
@@ -46,9 +45,6 @@ function verify (params) {
             if(!testCardinal) error = 'Please enter a correct Cardinal (N = North, E = Est, S = South, W = West)'
 
         }
-
-
-
 
     }
 

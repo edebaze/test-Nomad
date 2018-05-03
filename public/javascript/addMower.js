@@ -1,5 +1,3 @@
-console.log('salut')
-
 $('#AddMower').click(function(e) {
     e.preventDefault();
     $('.mowers').append("<div class='mower'> " +

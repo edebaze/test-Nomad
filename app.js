@@ -62,9 +62,7 @@ app.post('/test', function(req, res) {
     }
 
     else {
-        console.log(params)
         var mowers = automower(params);
-        console.log(mowers)
 
         res.render('test', {
             mowers : mowers
