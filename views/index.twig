@@ -1,0 +1,72 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+        {% if error is defined %}
+            <div class="error">
+                {{ error }}
+            </div>
+        {% endif %}
+
+
+        <form method="post" action="/test">
+            <h2> Lawn </h2>
+            <div class="lawn">
+                <input type="number" name="lawn[X]" value="5">
+                <input type="number" name="lawn[Y]" value="5">
+            </div>
+
+
+            <h2> Mowers </h2>
+
+            <div class="mowers">
+                <div class="params">
+                    <div class="param-name">X</div>
+                    <div class="param-name">Y</div>
+                    <div class="param-name">Direction</div>
+                    <div class="param-name">Movement</div>
+                </div>
+                <div class="mower">
+                    <input type="number" name="mowers[X]" value="1">
+                    <input type="number" name="mowers[Y]" value="1">
+                    <input type="text" name="mowers[Cardinal]" value="N">
+                    <input type="text" name="mowers[Moovement]" value="A">
+                    <button class='dismissMower'> Dissmiss that mower</button>
+                </div>
+            </div>
+
+
+
+            <input type="submit" value="Submit">
+            <button id="AddMower">Add a Mower</button>
+
+
+        </form>
+
+    <div class="help">
+        <h3>Direction : </h3>
+        <ul>
+            <li>N = North</li>
+            <li>E = East</li>
+            <li>S = South</li>
+            <li>W = West</li>
+        </ul>
+
+        <h3>Moovements</h3>
+        <ul>
+            <li>A = Moving forward</li>
+            <li>D = Turn right (90°)</li>
+            <li>G = Turn left  (90°)</li>
+        </ul>
+    </div>
+
+
+
+    <!-- -------------------------------- Script jquery ----------------------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <script src="/javascript/addMower.js"></script>
+
+{% endblock %}
+

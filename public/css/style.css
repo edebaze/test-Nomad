@@ -1,0 +1,57 @@
+input {
+    text-align: center;
+    width: 10%;
+}
+
+form {
+    width: 60%;
+    margin: 5vh auto;
+    text-align: center;
+}
+
+.dismissMower {
+    width: 20%;
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+}
+
+#AddMower {
+    margin-left: 10px;
+    background-color: green;
+    color: white;
+}
+
+.help {
+    width: 200px;
+    height: 100vh;
+    border-right: solid 3px black;
+    padding: 50px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.mower {
+    margin: 20px;
+    float: left;
+    width: 100%;
+}
+
+.params {
+    width: 42%;
+    margin-left: 20%;
+}
+
+.param-name {
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+
+.error {
+    width: 100%;
+    color: red;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+    <h1> ---------------------------------------------------------------------- </h1>
+
+    {% for mower in mowers %}
+
+        X pos : {{ mower.x }} - Y pos : {{ mower.y }} - Direction : {{ mower.cardinal }}
+
+        <h1> ---------------------------------------------------------------------- </h1>
+    {% endfor %}
+
+    <br>
+    <a href="/">Retour vers l'index</a>
+{% endblock %}
